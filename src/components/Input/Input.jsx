@@ -7,8 +7,7 @@ import { postData } from '../../utils/services';
 const Input = ({ children, text }) => {
   const [data, setData] = useState();
 
-  const formHandle = (e) => {
-    e.preventDefault();
+  const formHandle = () => {
     const inputData = {
       title: data,
     };

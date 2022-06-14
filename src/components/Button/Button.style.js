@@ -8,4 +8,9 @@ export const Button = styled.button`
   cursor: pointer;
   font-size: medium;
   padding: 0.5rem 1rem;
+
+  :hover {
+    transition: ease-in 0.2s;
+    background-color: #ffffff;
+  }
 `;
