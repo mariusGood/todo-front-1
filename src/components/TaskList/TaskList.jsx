@@ -1,22 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getData } from '../../utils/services';
 import Task from '../Task/Task';
-// import PropTypes from "prop-types";
 import * as S from './TaskList.style';
 
 const TaskList = () => {
+  const [data, setData] = useState([]);
+
+  async function renderData() {
+    const resp = await getData();
+    setData(resp);
+  }
+
+  useEffect(() => {
+    renderData();
+  }, []);
+
   return (
     <S.TaskList>
-      <Task>asdasdasdasdasdasdasdasdasdasdasdasdasdasd</Task>
-      <Task>asdasdasd</Task>
-      <Task>
-        asdasdasdasdasdasdasdasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdasdasdasdas
-      </Task>
+      {data.map((todo) => (
+        <Task key={todo.id}>{todo.title}</Task>
+      ))}
     </S.TaskList>
   );
 };
-
-// TaskList.propTypes = {
-//   children: PropTypes.any,
-// };
 
 export default TaskList;

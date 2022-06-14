@@ -1,5 +1,3 @@
 import styled from 'styled-components';
 
-export const Title = styled.h2`
-  font-size: medium;
-`;
+export const Title = styled.h1``;

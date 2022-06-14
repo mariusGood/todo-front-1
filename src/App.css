@@ -2,7 +2,8 @@
   margin: 0 auto;
   font-family: 'Rubik', sans-serif;
   background: #00000080;
-  height: 98vh;
+  height: 100vh;
+  max-height: max-content;
   color: #f3b583;
   background-image: url('assets/background.jpg');
 }
