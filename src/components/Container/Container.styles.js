@@ -6,7 +6,7 @@ export const Container = styled.div`
   box-shadow: 1px 1px 5px #808080c5;
   color: #9c4700;
   margin: 0 auto;
-  max-width: 25%;
+  max-width: 30%;
   padding: 3rem;
   position: relative;
   top: 5rem;

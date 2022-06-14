@@ -12,7 +12,7 @@ const Input = ({ children, text }) => {
       title: data,
     };
     const res = postData(inputData);
-    console.log(res);
+    return res;
   };
 
   return (

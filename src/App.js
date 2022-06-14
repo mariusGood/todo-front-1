@@ -22,7 +22,7 @@ function App() {
       <Container>
         <Title>Todo list</Title>
         <Input />
-        <TaskList data={data} />
+        <TaskList reload={renderData} data={data} />
       </Container>
     </div>
   );
