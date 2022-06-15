@@ -5,13 +5,13 @@ import Button from '../Button/Button';
 import { postData } from '../../utils/services';
 
 const Input = ({ children, text }) => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
-  const formHandle = () => {
+  const formHandle = async () => {
     const inputData = {
       title: data,
     };
-    const res = postData(inputData);
+    const res = await postData(inputData);
     return res;
   };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { deleteData, updateData } from '../../utils/services';
 import Task from '../Task/Task';
 import * as S from './TaskList.style';
@@ -35,7 +35,6 @@ const TaskList = ({ data, reload }) => {
           </div>
         </Task>
       ))}
-      <p>Pending tasks:{data.length}</p>
     </S.TaskList>
   );
 };
