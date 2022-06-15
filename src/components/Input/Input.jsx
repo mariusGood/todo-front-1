@@ -21,6 +21,7 @@ const Input = ({ children, text }) => {
         placeholder={text}
         value={data}
         onChange={(e) => setData(e.target.value)}
+         onClick={(e) => setData(e.target.value)}
       >
         {children}
       </S.Input>
