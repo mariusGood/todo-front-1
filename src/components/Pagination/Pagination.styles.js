@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Page = styled.ul`
   display: flex;
@@ -15,10 +16,10 @@ export const Page = styled.ul`
       transition: ease-in 0.2s;
     }
   }
+`;
 
-  a {
-    color: #9c4700;
-    padding: 0 0.5rem;
-    text-decoration: none;
-  }
+export const StyledLink = styled(Link)`
+  color: #9c4700;
+  padding: 0 0.5rem;
+  text-decoration: none;
 `;

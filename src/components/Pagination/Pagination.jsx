@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Page } from './Pagination.styles';
+import { Page, StyledLink } from './Pagination.styles';
 
 const Pagination = ({ taskPerPage, totalTasks, paginate }) => {
   const pageNumbers = [];
@@ -14,7 +13,9 @@ const Pagination = ({ taskPerPage, totalTasks, paginate }) => {
       <Page>
         {pageNumbers.map((page) => (
           <li className='page' key={page}>
-            <a onClick={() => paginate(page)}>{page}</a>
+            <StyledLink to='#' onClick={() => paginate(page)}>
+              {page}
+            </StyledLink>
           </li>
         ))}
       </Page>

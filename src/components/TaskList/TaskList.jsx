@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { deleteData, updateData } from '../../utils/services';
 import Task from '../Task/Task';
 import * as S from './TaskList.style';
