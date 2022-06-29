@@ -17,7 +17,7 @@ const Input = ({ children, reload }) => {
       return reload();
     }
     if (Object.values(res[0]).includes('title')) {
-      alert('Task min: 1 max: 50 charecters long');
+      alert('Task min: 1 max: 50 characters long');
       return;
     }
   }
