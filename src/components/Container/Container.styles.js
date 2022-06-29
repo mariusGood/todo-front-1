@@ -6,9 +6,21 @@ export const Container = styled.div`
   box-shadow: 1px 1px 5px #808080c5;
   color: #9c4700;
   margin: 0 auto;
-  max-width: 30%;
+  width: 30vw;
   padding: 3rem;
   position: relative;
   top: 5rem;
-  max-height: 70vh;
+
+  @media screen and (min-width: 1441px) {
+    padding: 3vw;
+    top: 5vw;
+  }
+
+  @media screen and (max-width: 1440px) {
+    width: 30rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 50vw;
+  }
 `;

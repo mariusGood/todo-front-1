@@ -12,10 +12,13 @@ const Input = ({ children, reload }) => {
       title: data,
     };
     const res = await postData(inputData);
-
     if (res.msg === 'Success') {
       setData('');
-      reload();
+      return reload();
+    }
+    if (Object.values(res[0]).includes('title')) {
+      alert('Task min: 1 max: 50 charecters long');
+      return;
     }
   }
 

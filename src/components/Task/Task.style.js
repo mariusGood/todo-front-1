@@ -9,7 +9,7 @@ export const Task = styled.div`
   box-sizing: border-box;
   margin-top: 0.5rem;
   padding: 0.65rem;
-  word-wrap: break-word;
+  word-break: break-all;
 
   i {
     padding: 0 0.5rem;

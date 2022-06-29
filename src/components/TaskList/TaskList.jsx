@@ -11,6 +11,12 @@ const TaskList = ({ data, reload }) => {
 
   const update = async (id, title) => {
     const data = prompt('', title);
+    if (data === '') {
+      return await remove(id);
+    }
+    if (data.length >= 51) {
+      prompt('Task min: 1 max: 50 charecters long', data);
+    }
     const obj = {
       title: data,
     };
@@ -23,7 +29,7 @@ const TaskList = ({ data, reload }) => {
       {data.map((todo) => (
         <Task key={todo.id}>
           {todo.title}
-          <div>
+          <div className='icons'>
             <i
               onClick={() => update(todo.id, todo.title)}
               className='fa-solid fa-pencil'

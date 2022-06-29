@@ -1,8 +1,16 @@
 .App {
-  margin: 0 auto;
-  font-family: 'Rubik', sans-serif;
-  background: #00000080;
-  height: 95vh;
-  max-height: max-content;
   background-image: url('assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1rem;
+  font-family: 'Rubik', sans-serif;
+  height: 95vh;
+  max-height: auto;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1441px) {
+  .App {
+    font-size: 1.1vw;
+  }
 }
